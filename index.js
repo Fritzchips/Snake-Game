@@ -1,5 +1,5 @@
 const canvas = document.querySelector("canvas");
-const c = canvas.getContext("2d");
+const ctx = canvas.getContext("2d");
 canvas.width = 800;
 canvas.height = 800;
 
@@ -13,8 +13,8 @@ class Item {
   }
 
   draw() {
-    c.fillStyle = this.color;
-    c.fillRect(this.x, this.y, this.itemSize, this.itemSize);
+    ctx.fillStyle = this.color;
+    ctx.fillRect(this.x, this.y, this.itemSize, this.itemSize);
   }
 
   update() {
@@ -133,12 +133,12 @@ function gameStateMaster() {
       clearInterval(snakeMove);
       clearInterval(timeTic);
       resumeGame = false;
-      c.fillStyle = "rgba(0,0,0, 0.5)";
-      c.fillRect(0, 0, canvas.width, canvas.height);
-      c.font = "50px Ariel";
-      c.fillStyle = "white";
-      c.textAlign = "center";
-      c.fillText("Paused", canvas.width / 2, canvas.height / 2);
+      ctx.fillStyle = "rgba(0,0,0, 0.5)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.font = "50px Ariel";
+      ctx.fillStyle = "white";
+      ctx.textAlign = "center";
+      ctx.fillText("Paused", canvas.width / 2, canvas.height / 2);
       break;
 
     case "gameover":
@@ -204,9 +204,9 @@ function countDown() {
 function animate() {
   requestAnimationFrame(animate);
 
-  c.clearRect(0, 0, canvas.width, canvas.height);
-  c.fillStyle = "#1EF060";
-  c.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#1EF060";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   for (let i = 0; i < snakeBody.length; i++) snakeBody[i].update();
 
@@ -214,8 +214,10 @@ function animate() {
 
   collisionTest(snakeBody[0].x, snakeBody[0].y);
 
-  (c.font = "30px Ariel"), (c.fillStyle = "black"), (c.textAlign = "left");
-  c.fillText(
+  (ctx.font = "30px Ariel"),
+    (ctx.fillStyle = "black"),
+    (ctx.textAlign = "left");
+  ctx.fillText(
     `Apples: ${score} Time: 0:${appendTimeValue(seconds)}s`,
     itemSize,
     canvas.height - itemSize

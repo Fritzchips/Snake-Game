@@ -42,4 +42,4 @@ Want a smile? Check out how the snake dies...
 
 ---
 
-- **Fritz Solibio** - _Junior Full-Stack Develepor In Training_
+- **Fritz Solibio** - _Software Development Mastermind Student_
