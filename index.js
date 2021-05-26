@@ -208,9 +208,9 @@ function animate() {
   ctx.fillStyle = "#1EF060";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  for (let i = 0; i < snakeBody.length; i++) snakeBody[i].update();
+  for (let snakePart of snakeBody) snakePart.update();
 
-  for (let j = 0; j < fruit.length; j++) fruit[j].update();
+  for (let singleApple of fruit) singleApple.update();
 
   collisionTest(snakeBody[0].x, snakeBody[0].y);
 
