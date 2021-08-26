@@ -6,6 +6,10 @@ canvas {
   border: 5px solid black;
 }
 
+h1 {
+  font-size: 40px;
+}
+
 #modal {
   display: none;
   position: fixed;
@@ -21,7 +25,7 @@ canvas {
   margin: 15% auto;
   width: 30%;
 
-  background-color: white;
+  background-color: #d9d7c3;
   border: 3px solid black;
   border-radius: 10px;
   display: flex;
@@ -30,7 +34,7 @@ canvas {
   padding: 10px;
 }
 #death {
-  font-size: 35px;
+  font-size: 30px;
   color: red;
 }
 #stats {
