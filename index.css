@@ -50,3 +50,9 @@ button {
   background-color: rgb(9, 255, 255);
   border-radius: 5px;
 }
+
+@media screen and (max-width: 480px) {
+  #report {
+    width: 80vw;
+  }
+}
