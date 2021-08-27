@@ -92,8 +92,8 @@ function changeDirection(e) {
 }
 
 function appleRandomize() {
-  apple.x = Math.floor((Math.random() * 800) % 25) * 25;
-  apple.y = Math.floor((Math.random() * 800) % 25) * 25;
+  apple.x = Math.floor((Math.random() * canvas.width) % itemSize) * itemSize;
+  apple.y = Math.floor((Math.random() * canvas.height) % itemSize) * itemSize;
 
   for (let i = 0; i < snake.body.length; i++) {
     if (apple.y === snake.body[i].y && apple.x === snake.body[i].x) {

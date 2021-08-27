@@ -9,6 +9,8 @@ Play it [here](https://fritzchips.github.io/Snake-Game/)
 
 ## Instructions
 
+- Playable on desktop
+
 UP ARROW = Snake Up
 
 LEFT ARROW = Snake Left
